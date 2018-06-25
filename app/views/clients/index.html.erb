@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Emale</th>
+      <th>Email</th>
       <th>Phone</th>
       <th colspan="3"></th>
     </tr>
@@ -16,7 +16,7 @@
     <% @clients.each do |client| %>
       <tr>
         <td><%= client.name %></td>
-        <td><%= client.emale %></td>
+        <td><%= client.email %></td>
         <td><%= client.phone %></td>
         <td><%= link_to 'Show', client %></td>
         <td><%= link_to 'Edit', edit_client_path(client) %></td>
