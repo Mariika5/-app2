@@ -112,9 +112,6 @@
         <div class="col-md-6">
           <h1 class="title">Гарантируем продажу вашей недвижимости за 30 дней.</h1>
           <h4>ипотека, экспресс-продажа, обмен недвижимости</h4>
-          	<div class="container">
-      			<%= yield %>
-      		</div>
           <br>
           <a href="#form" class="btn btn-warning btn-raised btn-lg">
             Позвоните мне
@@ -334,37 +331,7 @@
         <div class="col-md-8 ml-auto mr-auto">
             <h2 class="text-center title">Работать с нами - одно удовольствие!</h2>
             <h4 class="text-center description">Если вам нужно что-то купить или что-то продать, а тем более что-то подарить - оставьте заявку и мы вам немедленно перезвоним.</h4>
-            <form class="contact-form">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="bmd-label-floating">Ваше имя</label>
-                            <input type="email" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="bmd-label-floating">Ваш Email</label>
-                            <input type="email" class="form-control">
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="exampleMessage" class="bmd-label-floating">Ваше сообщение</label>
-                    <textarea type="email" class="form-control" rows="4" id="exampleMessage"></textarea>
-                    <div>
-                        <h5 class="text-center description">Оставляя заявку вы соглашаетесь с политикой конфеденциальности.</h5>
-                </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 ml-auto mr-auto text-center">
-                        <button class="btn btn-warning btn-raised">
-                            Оставить заявку
-                        </button>
-
-                    </div>
-                </div>
-            </form>
+            <%= yield %>
         </div>
     </div>
 </div>
