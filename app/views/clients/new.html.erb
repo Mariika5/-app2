@@ -1,7 +1,7 @@
   <%= form_with(model: @client, local: true, class: 'contact-form') do |form| %>
     <% if @client.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
+          <p>Ошибка ввода данных</p>
 
           <ul>
           <% @client.errors.full_messages.each do |message| %>
@@ -15,6 +15,14 @@
             <div class="form-group">
                 <label class="bmd-label-floating">Ваше имя</label>
                 <%= form.text_field :name, id: :client_name, class: 'form-control'%>
+            </div>
+          </div>
+    </div>
+    <div class="row">
+          <div class="col-md-8 ml-auto mr-auto text-center">
+            <div class="form-group">
+                <label class="bmd-label-floating">Ваша фамилия</label>
+                <%= form.text_field :last_name, id: :client_last_name, class: 'form-control'%>
             </div>
           </div>
     </div>
@@ -45,5 +53,4 @@
         </div>
     </div>
 <% end %>
-
 
