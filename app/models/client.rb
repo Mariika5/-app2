@@ -9,9 +9,9 @@ class Client < ApplicationRecord
      def full_name
      	if name && last_name 
      		"#{name} #{last_name}"
-     	elsif name.empty?
+     	elsif name.nil? || name.empty?
      	    last_name
-     	elsif last_name.empty?
+     	elsif last_name.nil? || last_name.empty?
      		name
      	else 
      		""
