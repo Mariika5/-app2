@@ -7,12 +7,12 @@ class Client < ApplicationRecord
 
 
      def full_name
-     	if name && last_name 
+     	if name.present? && last_name.present? 
      		"#{name} #{last_name}"
-     	elsif name.nil? || name.empty?
-     	    last_name
-     	elsif last_name.nil? || last_name.empty?
-     		name
+     	elsif name.present?
+     	     name
+     	elsif last_name.present?
+     		 last_name
      	else 
      		""
      	end
@@ -24,3 +24,6 @@ end
 # - Если name и last_name не nil и не пустая строка - то складываем name, last_name, между ними пробел
 # - Если name или last_name nil или пустая строка - то берем только не пустое поле
 # - Если и name и last_name пустая строка или nil - возвращаем пустую строку
+
+#  если name и last_name будут "" то выполнится первое условие
+# и метод вернет " ", а должен ""
